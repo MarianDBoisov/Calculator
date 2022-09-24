@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter the operation");
+        System.out.println("Examples: 1 + 1 or 1 - 1 or 1 * 1 or 1 / 1");
+
+        String[] operation = scanner.nextLine().split("\\s+");
+
+        Calculator.AMethodForUnderstandingTheMultiplierAndCalculation(Double.parseDouble(operation[0]), operation[1],Double.parseDouble(operation[2]));
+
+
+    }
+}
