@@ -1,0 +1,33 @@
+import java.util.Locale;
+
+public class Calculator {
+    private Double num1;
+    private String symbol;
+    private Double num2;
+
+    public Calculator(Double num1, String symbol, Double num2) {
+        this.num1 = num1;
+        this.symbol = symbol;
+        this.num2 = num2;
+    }
+
+    public Double getNum1() {
+        return num1;
+    }
+
+    public Double getNum2() {
+        return num2;
+    }
+
+
+    static void AMethodForUnderstandingTheMultiplierAndCalculation(Double getNum1, String symbol, Double getNum2) {
+        Double operation = switch (symbol) {
+            case "+" -> getNum1 + getNum2;
+            case "-" -> getNum1 - getNum2;
+            case "*" -> getNum1 * getNum2;
+            case "/" -> getNum1 / getNum2;
+            default -> throw new IllegalStateException("Unexpected value: " + symbol);
+        };
+        System.out.printf("Answer is: %.2f", operation);
+    }
+}
